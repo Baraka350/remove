@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .container {
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <input type="text" placeholder="first name">
+        <input type="number" id="number" placeholder="ID">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Login</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        function checkPassword(){
+        let correctPassword="adam123"
+        let interedPassword=document.getElementById('password').value;
+        let message=document.getElementById('message');
+        if (interedPassword === correctPassword){
+            message.innerHTML="ok";
+        } 
+        else{
+            message.innerHTML= "incorect password"
+        }
+    }
+    </script>
+    
+</body>
+</html>
